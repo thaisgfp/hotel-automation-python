@@ -1,0 +1,64 @@
+class Cliente():
+    def __init__(self, nome:str, email: str, telefone: str, cliente_id: int):
+        self.nome = nome
+        self.email = email
+        self.telefone = telefone
+        self.cliente_id = cliente_id
+
+from clientes import Cliente
+from quartos import Quartos
+
+
+
+class Hotel():
+    def __init__(self, nome_Hotel: str, endereco: str, estrelas: int):
+        self.nome_Hotel = nome_Hotel
+        self.endereco = endereco
+        self.estrelas = estrelas
+        self.listas_de_quartos = []
+        self.lista_de_clientes = []
+        self.dono_da_reserva = Cliente
+        self.numero_de_clientes_atual= 0
+        self.numero_de_reservas = 1
+
+def cadastrar_cliente(self):
+        self.nome = input("Digite o nome do cliente: ")
+        self.email = input("Digite o email do cliente: ")
+        self.telefone = input("Digite o telefone do cliente: ")
+        self.novo_cliente = Cliente(cliente_id= self.numero_de_clientes_atual+ 1, nome= self.nome, email= self.email, telefone= self.telefone)
+        self.numero_de_reservas += 1
+        self.lista_de_clientes.append(self.novo_cliente)
+        return "Cliente cadastrado com sucesso!"
+def listar_clientes(self):
+        for element in self.lista_de_clientes:
+            print("""" 
+============================
+
+Informações do Cliente:
+ID do Cliente: {element.cliente_id}
+Nome: {element.nome}
+Email: {element.email} 
+Telefone: {element.telefone}
+============================""")
+
+
+
+class Quartos():
+    def __init__(self, numero_do_quarto: int, tipo: str, preco_diaria: float, status: str):
+        self.numero_do_quarto = numero_do_quarto
+        self.tipo = tipo
+        self.preco_diaria= preco_diaria
+        self.status_do_quarto = True
+
+
+
+from clientes import Cliente
+from quartos import Quartos
+
+
+class Reservas():
+    def __init__(self, cliente: Cliente, quarto: Quartos, data: str):
+        self.cliente = cliente
+        self.quarto = quarto
+        self.data = data
+
